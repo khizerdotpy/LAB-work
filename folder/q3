@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{	
+	float taxrate,salary,income,tax;
+	printf("enter tax rate in percentage: ");
+	scanf("%f",&taxrate);
+	printf("enter salary: ");
+	scanf("%f",&salary);
+	
+	tax=(taxrate/100)*salary;
+	income=salary-tax;
+	
+	printf("tax is %f\nincome is %f",tax,income);
+	return 0;
+	
+}
