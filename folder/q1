@@ -1,0 +1,1 @@
+Integers in c can only take values from -2147483648 to 2147483647 and the input in the code is greater than 2147483647, hence error.
