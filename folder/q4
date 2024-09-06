@@ -1,1 +1,11 @@
 
+#include <stdio.h>
+
+int main()
+{
+	int kmpltr
+	int const fwdp=118;
+	int const backp=123;
+	printf("Enter kilometers covered per liter: ");
+	scanf("%d",&kmpltr);
+	
