@@ -1,11 +1,21 @@
-
 #include <stdio.h>
 
 int main()
 {
-	int kmpltr
+	float kmpltr,totalcost,totalfuel;
+	int dist;
 	int const fwdp=118;
 	int const backp=123;
+	printf("Enter distance (one sided): ");
+	scanf("%d",&dist);
 	printf("Enter kilometers covered per liter: ");
-	scanf("%d",&kmpltr);
-	
+	scanf("%f",&kmpltr);
+	if (kmpltr<=0)
+	 {  printf("that isn't possible dude, try again");
+	    return 0;
+	 }
+	totalcost=(dist/kmpltr)*fwdp+(dist/kmpltr)*backp;
+	totalfuel=2*(dist/kmpltr);
+	printf("$ %f = total cost, %f = total fuel used", totalcost,totalfuel);
+	return 0;
+}
