@@ -1,0 +1,15 @@
+#include <stdio.h>
+
+int main()
+{
+	float principal,interest,time,SI;
+	printf("Enter principal amount (must be between 100-100000): ");
+	scanf("%f",&principal);
+	printf("Enterinterest rate in % (must be between 5-10): ");
+	scanf("%f",&interest);
+	printf("Enter time in years (must be between 1-10): ");
+	scanf("%f",&time);
+	SI = principal*(interest/100)*time;
+	printf("%f is the simple interest",SI);
+	return 0;
+}
