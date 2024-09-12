@@ -1,0 +1,30 @@
+#include <stdio.h>
+int main()
+{
+	int num1,num2;
+	char op;
+	printf("enter num1: ");
+	scanf("%d",&num1);
+	printf("enter operator: ");
+	scanf(" %c",&op);
+	printf("enter num2: ");
+	scanf("%d",&num2);
+	switch(op)
+	{
+		case '+': 
+			printf("%d is the sum",num1+num2);
+			break;
+		case '-':
+			printf("%d is the difference",num1-num2);
+			break;
+		case '*':
+			printf("%d is the product",num1*num2);
+			break;
+		case '/':
+			printf("%d is the division",num1/num2);
+			break;
+		default:
+			printf("how do you get these instructions wrong, try again.");
+	}
+	return 0;
+}
