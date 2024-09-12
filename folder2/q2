@@ -1,0 +1,9 @@
+   #include <stdio.h>
+int main()
+{
+	int num;
+	printf("enter num: ");
+	scanf("%d",&num);
+	((num>=0 && num%2==0) && num%10==0)?printf("%d number is accepted",num):printf("%d is not accepted",num);
+	return 0;	
+}
