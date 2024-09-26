@@ -1,0 +1,32 @@
+#include <stdio.h>
+int main()
+{
+	int id,unit;
+	float charge,scharge,net;
+	printf("enter customer id: ");
+	scanf("%d",&id);
+	printf("enter units used: ");
+	scanf(" %d",&unit);
+	char name[20];
+	printf("enter customer name: ");
+	scanf(" %[^\n]s ",name);
+	printf("\n");
+	if (unit>=0 && unit<=199){
+	    charge=unit*16.20;
+	    printf("Customer ID: %d \nCustomer name: %s \nUnits consumed: %d \nAmount Charges @Rs. 16.20 per unit: %.3f",id,name,unit,charge);
+	} else if (unit>=200 && unit <300){
+	    charge=unit*20.10;
+	    printf("Customer ID: %d \nCustomer name: %s \nUnits consumed: %d \nAmount Charges @Rs. 20.10 per unit: %.3f",id,name,unit,charge);
+	} else if (unit>=300 && unit<500){
+	    charge=unit*27.10;
+	    printf("Customer ID: %d \nCustomer name: %s \nUnits consumed: %d \nAmount Charges @Rs. 27.10 per unit: %.3f",id,name,unit,charge);
+	} else if (unit>=500){
+	    charge=unit*35.90;
+	    if (charge>18000){
+	        scharge=charge*0.15;
+	        net=charge+scharge;
+	        printf("Customer ID: %d \nCustomer name: %s \nUnits consumed: %d \nAmount Charges @Rs. 35.90 per unit: %.3f \nSurcharge Amount:%.3f \nNet Amount Paid by the Customer:%.3f",id,name,unit,charge,scharge,net);
+	    } 
+	}
+	return 0;
+}
