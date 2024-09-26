@@ -1,0 +1,29 @@
+#include <stdio.h>
+int main()
+{
+	int cost;
+	float fcost,saved;
+	printf("Input total cost of items: ");
+	scanf("%d",&cost);
+	
+	if (cost>=500 && cost<2000) {
+	    fcost = 0.95*cost;
+	    saved = cost-fcost;
+	    printf("cost  before discount: %d\nsaved: %.3f \nfinal amount: %.3f",cost,saved,fcost);
+	 } else if (cost>=2000 && cost<=4000){
+	    fcost = 0.90*cost;
+	    saved = cost-fcost;
+	    printf("cost  before discount: %d\nsaved: %.3f \nfinal amount: %.3f",cost,saved,fcost);
+	 } else if (cost >4000 && cost <=6000){
+	     fcost = 0.80*cost;
+	    saved = cost-fcost;
+	    printf("cost  before discount: %d\nsaved: %.3f \nfinal amount: %.3f",cost,saved,fcost);
+	 } else if (cost>6000){
+	     fcost = 0.65*cost;
+	    saved = cost-fcost;
+	    printf("cost  before discount: %d\nsaved: %.3f \nfinal amount: %.3f",cost,saved,fcost);
+	 } else {
+	     printf("not valid for discount");
+	 }
+	return 0;
+}
