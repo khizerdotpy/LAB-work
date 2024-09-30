@@ -1,0 +1,25 @@
+#include <stdio.h>
+int main()
+{
+    float calnum,fatnum,calfat;
+    float perc;
+    printf("enter number of calroies(in decimals, like 0.0): ");
+    scanf("%f",&calnum);
+    printf("enter number of grams of fat:");
+    scanf("%f",&fatnum);
+    
+    if (calnum<=0 || fatnum<=0){
+        printf("dude this cannot be negative");
+    }
+    
+    calfat=fatnum*9;
+    
+    if (calfat>calnum){
+        printf("either the calories or fat grams were incorrectly entered");
+        return 0;
+    }
+    perc=(calfat/calnum);
+    
+    printf("the percentage of calories that come from fat: %.3f",perc);
+    return 0;
+}
