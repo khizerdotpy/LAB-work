@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main()
+{
+    int wd,vac;
+    printf("Is it a weekday?(1 for yes,0 for no): ");
+    scanf("%d",&wd);
+    printf("are you on vacation?(1 for yes,0 for no): ");
+    scanf("%d",&vac);
+    
+    if ((wd==0&&vac==0)||(wd==0&&vac==1)){
+        printf("rejoice, you can sleep in");
+    } else {
+        printf("despair, you can not sleep in");
+    }
+    return 0;
+}
