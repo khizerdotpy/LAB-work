@@ -1,0 +1,34 @@
+#include <stdio.h>
+int main()
+{
+    char ctype,csize;
+    printf("enter coffee type(B for Black and W for White): ");
+    scanf(" %c",&ctype);
+    printf("enter cup size(D for double and N for normal): ");
+    scanf(" %c",&csize);
+    switch(ctype){
+        case 'B':{
+            switch(csize){
+                case 'D':
+                printf("Put Water=30 mins\nSugar=30 mins\nMix well=37.5 mins\nAdd coffee232.5 mins\nMix well=37.5 mins");
+                break;
+                case 'N':
+                printf("Put Water=20 mins\nSugar=20 mins\nMix well=25 mins\nAdd coffee=15 mins\nMix well=25 mins");
+                break;
+            }
+        }
+        break;
+        case 'W':{
+            switch(csize){
+                case 'D':
+                printf("Put Water=22.5 mins\nSugar=22.5 mins\nMix well=30 mins\nAdd coffee=3 mins\nAdd Milk=6 mins\nMix well=30 mins");
+                break;
+                case 'N':
+                printf("Put Water=15 mins\nSugar=15 mins\nMix well=20 mins\nAdd coffee=2 mins\nAdd Milk=4 mins\nMix well=20 mins");
+                break;
+            }
+        }
+        break;
+    }
+    return 0;
+}
