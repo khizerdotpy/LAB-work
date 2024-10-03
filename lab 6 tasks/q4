@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <math.h>
+
+int main() 
+{
+    int num,ognum,digit;
+    double exp,base,res,sum=0.0;
+    printf("enter number: ");
+    scanf("%d",&num);
+    printf("enter number of digits: ");
+    scanf("%lf",&exp);
+    ognum=num;
+    while (num!=0){
+        digit=num%10;
+        base=digit;
+        res=pow(base,exp);
+        sum=sum+res;
+        num=num/10;
+        
+    }
+    
+    if (sum==ognum){
+        printf("%d is an armstrong number",ognum);
+    } else {
+        printf("%d is not an armstrong number",ognum);
+    }
+}
