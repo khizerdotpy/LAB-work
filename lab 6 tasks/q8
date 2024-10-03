@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main() 
+{
+    int i=0,x=64;
+    for(i=0;i<=4;i++){
+        
+        if (i==0 || i==4){
+            printf(" %c  %c  %c  %c  %c\n",i+65,i+66,i+67,i+68,i+69);
+        } else if (i==1 || i==3){
+            printf("    %c     %c  \n",i+66,i+69);
+        } else if (i==2){
+            printf("       %c    \n",i+67); 
+        }
+    }
+    return 0;
+}
