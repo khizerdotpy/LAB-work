@@ -1,0 +1,59 @@
+#include <stdio.h>
+
+int add(int a, int b)
+{
+    int res = a + b;
+    return res;
+}
+int subt(int a, int b)
+{
+    int res = a - b;
+    return res;
+}
+int multiply(int a, int b)
+{
+    int res = a * b;
+    return res;
+}
+float divide(float a, float b)
+{
+    if (b == 0)
+    {
+        printf("Error: Division by zero.\n");
+        return 0;
+    }
+    float res = a / b;
+    return res;
+}
+
+int main()
+{
+    int n1;
+    int n2;
+    char op;
+    printf("enter number 1: ");
+    scanf("%d", &n1);
+    printf("enter operation(+,-,*,/): ");
+    scanf(" %c", &op);
+    printf("enter number 2: ");
+    scanf("%d", &n2);
+
+    switch (op)
+    {
+    case '+':
+        printf("result: %d", add(n1, n2));
+        break;
+    case '-':
+        printf("result: %d", subt(n1, n2));
+        break;
+    case '*':
+        printf("result: %d", multiply(n1, n2));
+        break;
+    case '/':
+        printf("result: %f", divide((float)n1, (float)n2));
+        break;
+    default:
+        printf("enter valid operator");
+        break;
+    }
+}
