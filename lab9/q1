@@ -1,0 +1,42 @@
+#include <stdio.h>
+#include <string.h>
+
+int isPal(char arr[])
+{
+
+    int end = strlen(arr) - 1;
+
+    for (int i = 0; i <= end; i++)
+    {
+        if (arr[i] != arr[end - i])
+        {
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int main()
+{
+
+    char string[5][20];
+
+    for (int i = 0; i < 5; i++)
+    {
+        printf("enter a word: ");
+        scanf("%[^\n]s", &string[i]);
+    }
+
+    for (int i = 0; i < 5; i++)
+    {
+        if (isPal(string[i]))
+        {
+            printf("Palindrome\n");
+        }
+        else
+        {
+            printf("not Palindrome\n");
+        }
+    }
+    return 0;
+}
