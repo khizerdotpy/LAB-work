@@ -1,0 +1,25 @@
+#include <stdio.h>
+
+int main() {
+    int firstMatrix[3][3] = {{2, 4, 6}, {7, 43, 67}, {1, 8, 5}};
+    int secondMatrix[3][3] = {{2, 4, 6}, {7, 43, 67}, {1, 8, 5}};
+    int resultMatrix[3][3] = {0};
+
+    for (int x = 0; x < 3; x++) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                resultMatrix[x][i] += firstMatrix[x][j] * secondMatrix[j][i];
+            }
+        }
+    }
+
+    printf("Resultant matrix after multiplication:\n");
+    for (int i = 0; i < 3; i++) {
+        for (int j = 0; j < 3; j++) {
+            printf("%d\t", resultMatrix[i][j]);
+        }
+        printf("\n");
+    }
+
+    return 0;
+}
