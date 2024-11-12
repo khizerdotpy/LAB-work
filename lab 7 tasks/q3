@@ -1,0 +1,24 @@
+#include <stdio.h>
+
+int main() {
+    char inputString[5];
+    int stringLength = 0;
+    char *ptrToString = inputString;
+
+    printf("Enter string: ");
+    scanf("%s", inputString);
+
+    do {
+        stringLength++;
+        ptrToString++;
+    } while (*ptrToString != '\0');
+
+    printf("Length is: %d\n", stringLength);
+    printf("After reversing:\n");
+
+    for (int index = stringLength - 1; index >= 0; index--) {
+        printf("%c", inputString[index]);
+    }
+
+    return 0;
+}
