@@ -1,0 +1,49 @@
+#include<stdio.h>
+
+int main()
+{
+    int i, j, k, numRows;
+    printf("Enter the number of rows: ");
+    scanf("%d", &numRows);
+    
+    if (numRows < 0)
+    {
+        printf("Invalid input");
+    }
+    else
+    {
+        for (i = 0; i < numRows; i++)
+        {
+            for (j = 0; j < numRows - i; j++)
+            {
+                printf(" ");
+            }
+            for (j = 0; j <= i; j++)
+            {
+                int factorialI = 1;
+                for (k = 2; k <= i; k++)
+                {
+                    factorialI = factorialI * k;
+                }
+
+                int factorialJ = 1;
+                for (k = 2; k <= j; k++)
+                {
+                    factorialJ = factorialJ * k;
+                }
+
+                int factorialI_J = 1;
+                for (k = 2; k <= i - j; k++)
+                {
+                    factorialI_J = factorialI_J * k;
+                }
+
+                int binomialCoefficient = factorialI / (factorialJ * factorialI_J);
+                printf("%d ", binomialCoefficient);
+            }
+            printf("\n");
+        }
+    }
+    
+    return 0;
+}
