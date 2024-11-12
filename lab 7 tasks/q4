@@ -1,0 +1,33 @@
+#include <stdio.h>
+
+int main() {
+    char userInput[10];
+    int stringLength = 0;
+    char *stringPointer = userInput;
+    int isPalindrome = 0;
+
+    printf("Enter string: ");
+    scanf("%s", userInput);
+
+    do {
+        stringLength++;
+        stringPointer++;
+    } while (*stringPointer != '\0');
+
+    for (int index = 0; index < stringLength / 2; index++) {
+        if (userInput[index] == userInput[stringLength - index - 1]) {
+            isPalindrome = 1;
+        } else {
+            isPalindrome = 0;
+            break;
+        }
+    }
+
+    if (isPalindrome == 1) {
+        printf("This string is a palindrome\n");
+    } else {
+        printf("This string is not a palindrome\n");
+    }
+
+    return 0;
+}
