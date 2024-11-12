@@ -1,0 +1,45 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+    int smallestValue = 0, columnIndex = 0, isSaddlePoint = -1, saddleFound = 0;
+    int matrix[3][3];
+    
+    for (int row = 0; row < 3; row++) {
+        for (int col = 0; col < 3; col++) {
+            printf("Enter element at Row %d, Column %d: ", row + 1, col + 1);
+            scanf("%d", &matrix[row][col]);
+        }
+    }
+
+    for (int row = 0; row < 3; row++) {
+        smallestValue = matrix[row][0];
+        columnIndex = 0;
+        isSaddlePoint = 1;
+
+        for (int col = 0; col < 3; col++) {
+            if (matrix[row][col] < smallestValue) {
+                smallestValue = matrix[row][col];
+                columnIndex = col;
+            }
+        }
+
+        for (int x = 0; x < 3; x++) {
+            if (matrix[x][columnIndex] > smallestValue) {
+                isSaddlePoint = 0;
+                break;
+            }
+        }
+
+        if (isSaddlePoint == 1) {
+            printf("%d is a saddle point at row: %d and column: %d\n", smallestValue, row + 1, columnIndex + 1);
+            saddleFound = 1;
+            break;
+        }
+    }
+
+    if (saddleFound != 1) {
+        printf("No saddle point found\n");
+    }
+}
