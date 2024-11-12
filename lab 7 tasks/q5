@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int numbers[10];
+    int occurrenceCount;
+
+    printf("Enter 10 integers (except zero): \n");
+    for (i = 0; i < 10; i++) {
+        scanf("%d", &numbers[i]);
+    }
+
+    for (i = 0; i < 10; i++) {
+        if (numbers[i] != 0) {
+            occurrenceCount = 1;
+
+            for (j = i + 1; j < 10; j++) {
+                if (numbers[i] == numbers[j]) {
+                    occurrenceCount++;
+                    numbers[j] = 0;
+                }
+            }
+
+            printf("%d occurs %d times\n", numbers[i], occurrenceCount);
+        }
+    }
+
+    return 0;
+}
