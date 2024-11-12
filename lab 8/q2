@@ -1,0 +1,30 @@
+#include<stdio.h>
+#include<string.h>
+
+void main()
+{
+    int inputNumber = 0, startValue = 1, currentValue = 0;
+    printf("Enter the number: ");
+    scanf("%d", &inputNumber);
+
+    if (inputNumber % 2 == 0)
+    {
+        inputNumber -= 1;
+    }
+
+    currentValue = inputNumber;
+
+    for (int i = inputNumber; i >= startValue; i -= 2)
+    {
+        for (int j = 1; j <= i; j++)
+        {
+            if (currentValue > 0)
+            {
+                printf("%d ", currentValue);
+                currentValue -= 2;
+            }
+        }
+        printf("\n");
+        startValue++;
+    }
+}
