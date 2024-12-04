@@ -7,7 +7,7 @@ int main() {
 
     printf("Enter total number of characters ");
     scanf("%d", &n);
-  n++; // for the space between
+  n++;
 
   arr=(char*)malloc(n*sizeof(char));
   printf("enter your full name");
